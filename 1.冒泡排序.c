@@ -1,26 +1,26 @@
-//Ã°ÅÝÅÅÐò Bubble Sort    Â½Êéò£
-/*¶ÔÓÚÒ»×éÒªÅÅÐòµÄÔªËØÁÐ£¬ÒÀ´Î±È½ÏÏàÁÚµÄÁ½¸öÊý£¬
-½«±È½ÏÐ¡µÄÊý·ÅÔÚÇ°Ãæ£¬±È½Ï´óµÄÊý·ÅÔÚºóÃæ£¬Èç´Ë¼ÌÐø£¬
-Ö±µ½±È½Ïµ½×îºóµÄÁ½¸öÊý£¬½«Ð¡Êý·ÅÔÚÇ°Ãæ£¬´óÊý·ÅÔÚºóÃæ£¬ÖØ¸´²½Öè£¬Ö±ÖÁÈ«²¿ÅÅÐòÍê³É¡£*/
+//å†’æ³¡æŽ’åº Bubble Sort    
+/*å¯¹äºŽä¸€ç»„è¦æŽ’åºçš„å…ƒç´ åˆ—ï¼Œä¾æ¬¡æ¯”è¾ƒç›¸é‚»çš„ä¸¤ä¸ªæ•°ï¼Œ
+å°†æ¯”è¾ƒå°çš„æ•°æ”¾åœ¨å‰é¢ï¼Œæ¯”è¾ƒå¤§çš„æ•°æ”¾åœ¨åŽé¢ï¼Œå¦‚æ­¤ç»§ç»­ï¼Œ
+ç›´åˆ°æ¯”è¾ƒåˆ°æœ€åŽçš„ä¸¤ä¸ªæ•°ï¼Œå°†å°æ•°æ”¾åœ¨å‰é¢ï¼Œå¤§æ•°æ”¾åœ¨åŽé¢ï¼Œé‡å¤æ­¥éª¤ï¼Œç›´è‡³å…¨éƒ¨æŽ’åºå®Œæˆã€‚*/
 #include <stdio.h>
 #define N 100
 int main()
 {
     int a,b,c,n,array[N];
-    printf("ÇëÊäÈëÐèÒªÅÅÐòµÄÕûÊý¸öÊý£º\n");
+    printf("è¯·è¾“å…¥éœ€è¦æŽ’åºçš„æ•´æ•°ä¸ªæ•°ï¼š\n");
     scanf("%d",&n);
-    printf("ÇëÊäÈëÐèÒªÅÅÐòµÄÊý×Ö£º\n");
+    printf("è¯·è¾“å…¥éœ€è¦æŽ’åºçš„æ•°å­—ï¼š\n");
     for(a=0;a<n;a++)
         scanf("%d",&array[a]);
     for(a=1;a<n;a++)
         for(b=0;b<n-a;b++)
-        if(array[b]>array[b+1])//½«±È½ÏÐ¡µÄÊý·ÅÔÚÇ°Ãæ£¬±È½Ï´óµÄÊý·ÅÔÚºóÃæ
+        if(array[b]>array[b+1])//å°†æ¯”è¾ƒå°çš„æ•°æ”¾åœ¨å‰é¢ï¼Œæ¯”è¾ƒå¤§çš„æ•°æ”¾åœ¨åŽé¢
         {
             c=array[b];
             array[b]=array[b+1];
             array[b+1]=c;
         }
-        printf("°´´ÓÐ¡µ½´óÅÅÐò£º\n");
+        printf("æŒ‰ä»Žå°åˆ°å¤§æŽ’åºï¼š\n");
         for(a=0;a<n;a++)
             printf("%d\t",array[a]);
         printf("\n");
